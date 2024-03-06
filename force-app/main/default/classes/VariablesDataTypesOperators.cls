@@ -32,7 +32,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return The sum of the two numbers, or null if either number is null.
      */
     public static Integer addition(Integer a, Integer b) {  
-          if( a == null){
+          if( a == null || b == null ){
             return null;
           }else {
             return a + b;
@@ -161,7 +161,7 @@ public with sharing class VariablesDataTypesOperators {
 	}
 
     /**
-     * Question 8
+     * Question 9
      * Checks if a date is in the past.
      * Example: isDateInPast(Date.newInstance(2019, 1, 1)) should return true
      * The concept of getting the current date is not specifically covered in the content this week, but you can use the Date class to get the current date.
@@ -174,7 +174,7 @@ public with sharing class VariablesDataTypesOperators {
     }
 
     /**
-     * Question 9
+     * Question 10
      * Checks if a date is today or in the future.
      * Example: isDateTodayOrFuture(Date.newInstance(2019, 1, 1)) should return false
      * The concept of getting the current date is not specifically covered in the content this week, but you can use the Date class to get the current date.
