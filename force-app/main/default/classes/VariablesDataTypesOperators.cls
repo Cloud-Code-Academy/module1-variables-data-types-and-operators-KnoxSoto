@@ -18,7 +18,7 @@
  * If statements are not specifically covered in the lesson this module, but review module 2 flow control section for an overview if needed.
  * Resources: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_if_else.htm 
  * 
- * @author Knox-Nethan Aviles
+ * @author Knox-Nethan Aviles Soto
  */
 
 public with sharing class VariablesDataTypesOperators {
@@ -32,9 +32,16 @@ public with sharing class VariablesDataTypesOperators {
      * @return The sum of the two numbers, or null if either number is null.
      */
     public static Integer addition(Integer a, Integer b) {  
-        return null; // Replace null with the variable you used to store the result
+          if( a == null){
+            return null;
+          }else {
+            return a + b;
+          }
+            
+
     }
 
+    
     /**
      * Question 2
      * Performs subtraction of two numbers.
@@ -44,10 +51,19 @@ public with sharing class VariablesDataTypesOperators {
      * @return The difference between the two numbers.
      */
     public static Integer subtraction(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
+            Integer sub = a - b;
+        
+        return sub; // Replace null with the variable you used to store the result
+    }
+
+
+    public static void Results2(){
+        Integer callingMethod2 = subtraction(1,2);
+        System.debug('--Results--' + callingMethod2 );
     }
 
     /**
+     * Question 3
      * Performs multiplication of two numbers.
      * Example: multiplication(2, 3) should return 6
      * @param a The first number.
@@ -55,11 +71,19 @@ public with sharing class VariablesDataTypesOperators {
      * @return The product of the two numbers.
      */
     public static Integer multiplication(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
+          
+           Integer sum = a * b;
+       
+        return sum; // Replace null with the variable you used to store the result
     }
+     
 
+    public static void Results3(){
+        Integer callingMethod3 = multiplication(2, 3);
+        System.debug('--Result--' + callingMethod3);
+    }
     /**
-     * Question 3
+     * Question 4
      * Performs division of two numbers.
      * If the denominator is zero, return 0 to avoid division by zero error.
      * Example: division(6, 3) should return 2
@@ -67,12 +91,24 @@ public with sharing class VariablesDataTypesOperators {
      * @param b The denominator.
      * @return The quotient of the division, or 0 if the denominator is zero.
      */
-    public static Decimal division(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
+    public static Decimal division(Decimal a, Decimal b) {
+            Decimal div = a / b;
+
+            return div;
+        
+         // Replace null with the variable you used to store the result
     }
 
+   public static void Results4(){
+        
+        Decimal callingMethod4 = division(6,3);
+        System.debug('Result = ' + callingMethod4);
+    }
+
+
+
     /**
-     * Question 4
+     * Question 5
      * Checks if a number is even.
      * Example: isEven(2) should return true
      * This concept is not specifically covered in the content this week, but you can use the Math class and the modulus function to understand if the number is even or odd.
@@ -82,11 +118,12 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the number is even, False otherwise.
      */
     public static Boolean isEven(Integer num) {
+
         return null; // Replace null with the variable you used to store the result
     }
 
     /**
-     * Question 5
+     * Question 6
      * Checks if a number is positive.
      * Example: isPositive(2) should return true
      * @param num The number to check.
@@ -97,7 +134,7 @@ public with sharing class VariablesDataTypesOperators {
     }
 
     /**
-     * Question 6
+     * Question 7
      * Concatenates two strings.
      * Example: concatenateStrings('Hello', 'World') should return 'HelloWorld'
      * @param str1 The first string.
@@ -109,7 +146,7 @@ public with sharing class VariablesDataTypesOperators {
     }
 
 	/**
-     * Question 7
+     * Question 8
 	 * Constructs a sentence by concatenating a given noun, verb, and ending punctuation.
 	 * The sentence is structured to begin with 'The', followed by the noun, then 'is', the verb, and finally the ending punctuation.
 	 * Example: createSentence('cat', 'jumping', '!') should return 'The cat is jumping!'
