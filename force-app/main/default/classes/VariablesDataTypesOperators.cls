@@ -92,18 +92,19 @@ public with sharing class VariablesDataTypesOperators {
      * @return The quotient of the division, or 0 if the denominator is zero.
      */
     public static Decimal division(Decimal a, Decimal b) {
-            Decimal div = a / b;
+            Decimal result = a / b;
 
-            return div;
+        if(result == 0){
+                return 0;
+            }else{
+
+                return result;
+            }
+          
         
          // Replace null with the variable you used to store the result
     }
-
-   public static void Results4(){
-        
-        Decimal callingMethod4 = division(6,3);
-        System.debug('Result = ' + callingMethod4);
-    }
+  
 
 
 
@@ -134,9 +135,15 @@ public with sharing class VariablesDataTypesOperators {
      * @param num The number to check.
      * @return true if the number is positive, false otherwise.
      */
-    public static Boolean isPositive(Integer num) {
-            
-        return null; // Replace null with the variable you used to store the result
+    public static Boolean isPositive(Integer num){
+            Boolean posi = true;
+            Boolean negati = false;
+            if (num < 0) {
+                return negati;
+            }else {
+                return posi;
+            }
+         // Replace null with the variable you used to store the result
    
     }
 
