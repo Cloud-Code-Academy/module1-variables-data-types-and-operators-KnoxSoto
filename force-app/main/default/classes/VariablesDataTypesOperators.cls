@@ -156,7 +156,13 @@ public with sharing class VariablesDataTypesOperators {
      * @return The concatenated string.
      */
     public static String concatenateStrings(String str1, String str2) {
-        return null; // Replace null with the variable you used to store the result
+       String result = str1 + str2;
+
+        return result;// Replace null with the variable you used to store the result
+    }
+    public static void callingMethod5(){
+        String callMethod = concatenateStrings('Hello', 'World');
+        System.debug(callMethod);
     }
 
 	/**
