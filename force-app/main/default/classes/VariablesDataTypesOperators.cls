@@ -177,9 +177,17 @@ public with sharing class VariablesDataTypesOperators {
 	 * @return The complete sentence as a single String.
 	 */
 	public static String createSentence(String noun, String verb, String endingPunctuation) {
-		return null; // Replace null with the variable you used to store the result
+		String completeSentence = noun + ' ' + verb + endingPunctuation;
+        
+        return completeSentence; // Replace null with the variable you used to store the result
 	}
 
+    public static void callingmethod6(){
+        String callmethod2 = createSentence('cat', 'jumping', '!');
+            System.debug('The' + ' ' + callmethod2);
+
+        }
+    }
     /**
      * Question 9
      * Checks if a date is in the past.
@@ -189,9 +197,19 @@ public with sharing class VariablesDataTypesOperators {
      * @param dt The date to check.
      * @return True if the date is in the past, False otherwise.
      */
-    public static Boolean isDateInPast(Date dt) {
-        return null; // Replace null with the variable you used to store the result
-    }
+    public static Boolean isDateInPast(Date dt){
+        
+        Boolean dateInPast = true;
+        Boolean isPast = false;
+
+        if(dt < Date.today(){
+            return dateInPast;
+        }else{
+            return isPast;
+        }
+        
+      }  
+    
 
     /**
      * Question 10
@@ -203,6 +221,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the date is today or in the future, False otherwise.
      */
     public static Boolean isDateTodayOrFuture(Date dt) {
+
         return null; // Replace null with the variable you used to store the result
     }
 
