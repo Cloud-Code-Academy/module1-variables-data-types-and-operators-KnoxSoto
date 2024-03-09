@@ -145,7 +145,7 @@ public with sharing class VariablesDataTypesOperators {
             }
          // Replace null with the variable you used to store the result
    
-    }
+        }
 
     /**
      * Question 7
@@ -197,7 +197,7 @@ public with sharing class VariablesDataTypesOperators {
      * @param dt The date to check.
      * @return True if the date is in the past, False otherwise.
      */
-    public static Boolean isDateInPast(Date dt){
+        public static Boolean isDateInPast(Date dt){
         
         Boolean dateInPast = true;
         Boolean isPast = false;
@@ -221,8 +221,19 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the date is today or in the future, False otherwise.
      */
     public static Boolean isDateTodayOrFuture(Date dt) {
+        
+        Boolean dateInPast = true;
+        Boolean isPast = false;
 
-        return null; // Replace null with the variable you used to store the result
+        if(dt > Date.today(){
+            return dateInPast;
+        }else{
+            return isPast;
+        }
+        
+        
+
+
     }
 
     /**
@@ -235,11 +246,12 @@ public with sharing class VariablesDataTypesOperators {
      * @return The number of milliseconds equivalent to the given number of minutes.
      */
     public static Integer convertMinutesToMilliseconds(Integer minutes) {
-        Integer MILLISECONDS_PER_MINUTE = null; // Make this value a constant
-        Integer milliseconds;
-        return null; // Replace null with the variable you used to store the result
+        Integer MILLISECONDS_PER_MINUTE = 60000; // Make this value a constant
+        Integer milliseconds = minutes * MILLISECONDS_PER_MINUTE; // Variable
+        return minutes * milliseconds; // Replace null with the variable you used to store the result
     }    
 
+      
     /**
      * Question 11
      * Calculates the average of three numbers.
@@ -251,7 +263,11 @@ public with sharing class VariablesDataTypesOperators {
      * @return The average of the three numbers.
      */
     public static Double averageOfThreeNumbers(Integer a, Integer b, Integer c) {
-        return null; // Replace null with the variable you used to store the result
+        Integer total numbers = 3;
+        Integer sum = a + b + c;
+
+
+         return sum; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -266,10 +282,10 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Integer adjustOrderOfOperations1(Integer a, Integer b, Integer c) {
         // Add parentheses around the addition operation so that it is performed before multiplication
-        Integer result = a + b * c;
+        Integer result = (a + b) * c;
 
         // Return the result
-        return null; // Replace null with the variable you used to store the result
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -281,8 +297,8 @@ public with sharing class VariablesDataTypesOperators {
         // Add parentheses in the below expression to change the result.
         // The result of the expression as it is right now is 43. 
         // You should add parentheses so that the result of the expression becomes 8.
-        Integer answer = 48 - 15 + 5 * 2;
-        return null; // Replace null with the variable you used to store the result
+        Integer answer = 48 - (15 + 5 * 2);
+        return answer; // Replace null with the variable you used to store the result
     }
 
     /**
