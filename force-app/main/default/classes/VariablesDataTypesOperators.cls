@@ -92,13 +92,13 @@ public with sharing class VariablesDataTypesOperators {
      * @return The quotient of the division, or 0 if the denominator is zero.
      */
     public static Decimal division(Decimal a, Decimal b) {
-            Decimal result = a / b;
+            
 
-        if(result == 0){
+        if(b == 0){
                 return 0;
             }else{
 
-                return result;
+                return a / b;
             }
           
         
@@ -197,18 +197,15 @@ public with sharing class VariablesDataTypesOperators {
      * @param dt The date to check.
      * @return True if the date is in the past, False otherwise.
      */
-        public static Boolean isDateInPast(Date dt){
-        
-        Boolean dateInPast = true;
-        Boolean isPast = false;
+     public static Boolean isDateInPast(Date dt) {
+      
 
-        if(dt < Date.today(){
-            return dateInPast;
-        }else{
-            return isPast;
-        }
-        
-      }  
+       if (dt < Date.today()) {
+            return true;
+        } else {
+           return false;
+       }
+   }
     
 
     /**
@@ -222,13 +219,13 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Boolean isDateTodayOrFuture(Date dt) {
         
-        Boolean dateInPast = true;
-        Boolean isPast = false;
+     Boolean dateInPast = true;
+     Boolean isPast = false;
 
-        if(dt > Date.today(){
+       if(dt > Date.today()){
             return dateInPast;
-        }else{
-            return isPast;
+         }else{
+           return isPast;
         }
         
         
@@ -264,10 +261,10 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Double averageOfThreeNumbers(Integer a, Integer b, Integer c) {
         Integer total numbers = 3;
-        Integer sum = a + b + c;
+        Double sum = (double)(a + b + c);
 
 
-         return sum; // Replace null with the variable you used to store the result
+         return sum / total; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -297,7 +294,7 @@ public with sharing class VariablesDataTypesOperators {
         // Add parentheses in the below expression to change the result.
         // The result of the expression as it is right now is 43. 
         // You should add parentheses so that the result of the expression becomes 8.
-        Integer answer = 48 - (15 + 5 * 2);
+        Integer answer = 48 - (15 + 5) * 2;
         return answer; // Replace null with the variable you used to store the result
     }
 
@@ -317,9 +314,9 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Double complexOrderOfOperations(Integer a, Integer b, Integer c, Integer d, Integer e) {
         // Add parentheses around the multiplication and subtraction operations so that they are performed before division and addition
-        Double result = a * b - c / (Double) d + e;
+        Double result = (a * b - c) / (Double) d + e;
 
-        return null; // Replace null with the variable you used to store the result
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -330,11 +327,14 @@ public with sharing class VariablesDataTypesOperators {
      * @return The temperature in Celsius equivalent to the given Fahrenheit temperature.
      */
     public static Double convertFahrenheitToCelsius(Double fahrenheit) {
-        final Double SUBTRACT_FACTOR = 32.0;
+        final Double SUBTRACT_FACTOR = 32.0;  // Final means that the variable can be assigned at most once, either in the declaration itself, or with a static initializer method 
         final Double MULTIPLY_FACTOR = 5.0;
         final Double DIVIDE_FACTOR = 9.0;
+
+
+        Double Celsius = (fahrenheit - SUBTRACT_FACTOR) * MULTIPLY_FACTOR / DIVIDE_FACTOR;
     
-        return null; // Replace null with the variable you used to store the result
+        return Celsius; // Replace null with the variable you used to store the result
     }
 
     
@@ -350,11 +350,10 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Integer performDivisionAndCast(Double a, Double b) {
         // Perform the division and cast (round down) off the result.
-        Double divisionResult = null;
-
+        Double divisionResult = a / b;
         // Write the code for type casting the divisionResult to an Integer
-        Integer roundedResult = null;
-        return null; // Replace null with the variable you used to store the result
+        Integer roundedResult = divisionResult.intValue();
+        return roundedResult; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -366,9 +365,10 @@ public with sharing class VariablesDataTypesOperators {
      * @param numberOfHours The number of hours worked in a week.
      * @return A Decimal representing the weekly paycheck.
      */
-    public static Decimal calculateWeeklyPaycheck(Decimal hourlyRate, Double numberOfHours) {
+    public static Decimal calculateWeeklyPaycheck(Decimal hourlyRate, Double numberOfHours) {  
         // Calculate the weekly paycheck using the formula: rate multiplied by hours
-        return null; // Replace null with the variable you used to store the result
+        Decimal weeklyPaycheck = hourlyRate * Decimal.valueOf(numberOfHours);
+        return weeklyPaycheck; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -382,7 +382,10 @@ public with sharing class VariablesDataTypesOperators {
      * @return A Decimal representing the monthly paycheck.
      */
     public static Decimal calculateMonthlyPaycheck(Decimal hourlyRate, Double numberOfHours) {
-        return null; // Replace null with the variable you used to store the result
+        Decimal weeklyPaycheck = hourlyRate * Decimal.valueOf(numberOfHours);
+        Decimal monthlyPaycheck = 4;
+
+        return weeklyPaycheck * monthlyPaycheck; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -396,6 +399,8 @@ public with sharing class VariablesDataTypesOperators {
      * @return The total cost after applying the sales tax.
      */
     public static Decimal calculateTotalCost(Decimal pricePerUnit, Integer numberOfUnits, Decimal salesTaxRate) {
-        return null; // Replace null with the variable you used to store the result
+        return pricePerUnit * Decimal.valueOf(numberOfUnits) * (1 + salesTaxRate); // Replace null with the variable you used to store the result
     }
 }
+
+
